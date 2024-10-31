@@ -1,0 +1,30 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.card {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.btn {
+    animation: scaleUp 0.5s ease-in-out;
+}
+.blur-lg {
+    filter: blur(5px);
+}

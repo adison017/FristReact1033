@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { CartProvider } from './CartContext';
+import { BrowserRouter } from 'react-router-dom'; // นำเข้า BrowserRouter
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter> {/* ห่อหุ้ม App ด้วย BrowserRouter */}
+    <CartProvider>
+      <App />
+    </CartProvider>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
